@@ -34,6 +34,11 @@ public class FizzBuzz {
         }
     }
 
+    /**
+     * The functional version of the method
+     *
+     * @param n the number of times to loop
+     */
     public static void functionalVersion(final int n) {
         IntStream.rangeClosed(1, n)
                 .forEach(i -> {
