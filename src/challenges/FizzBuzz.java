@@ -20,17 +20,7 @@ public class FizzBuzz {
      */
     public static void standardVersion(final int n) {
         for (int i = 1; i <= n; i++) {
-            boolean div3 = i % 3 == 0;
-            boolean div5 = i % 5 == 0;
-            if (div3 && div5) {
-                System.out.println("FizzBuzz");
-            } else if (div3) {
-                System.out.println("Fizz");
-            } else if (div5) {
-                System.out.println("Buzz");
-            } else {
-                System.out.println(i);
-            }
+            printNumberOrString(i);
         }
     }
 
@@ -42,17 +32,29 @@ public class FizzBuzz {
     public static void functionalVersion(final int n) {
         IntStream.rangeClosed(1, n)
                 .forEach(i -> {
-                    boolean div3 = i % 3 == 0;
-                    boolean div5 = i % 5 == 0;
-                    if (div3 && div5) {
-                        System.out.println("FizzBuzz");
-                    } else if (div3) {
-                        System.out.println("Fizz");
-                    } else if (div5) {
-                        System.out.println("Buzz");
-                    } else {
-                        System.out.println(i);
-                    }
+                    printNumberOrString(i);
                 });
+    }
+
+    /**
+     * This function does the following:
+     *   <p>- If the number is a multiple of 3, it prints "Fizz".</p>
+     *   <p>- If the number is a multiple of 5, it prints "Buzz".</p>
+     *   <p>- If the number is a multiple of both 3 and 5, it prints "FizzBuzz".</p>
+     *   <p>- Else it prints the number </p>
+      * @param i number to be processed
+     */
+    private static void printNumberOrString(final int i) {
+        final boolean div3 = i % 3 == 0;
+        final boolean div5 = i % 5 == 0;
+        if (div3 && div5) {
+            System.out.println("FizzBuzz");
+        } else if (div3) {
+            System.out.println("Fizz");
+        } else if (div5) {
+            System.out.println("Buzz");
+        } else {
+            System.out.println(i);
+        }
     }
 }
