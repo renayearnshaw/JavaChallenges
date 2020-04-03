@@ -1,5 +1,4 @@
-import challenges.FizzBuzz;
-import challenges.TwoSum;
+import challenges.*;
 import utils.TimeCode;
 
 public class RunChallenge {
