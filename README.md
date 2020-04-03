@@ -7,3 +7,10 @@ A selection of challenges in Java that might get thrown at you during interviews
     * For each number that is a multiple of both 3 and 5, print "FizzBuzz" instead of the number.
     
     Use as few characters as possible
+2. **TwoSum**\
+  Given an array of integers, return indices of the two numbers that add up to a specific target.
+  You may assume that each input would have exactly one solution, and you may not use the same element twice.
+  
+   Example:\
+   Given nums = [2, 7, 11, 15], target = 9,\
+   Because nums[0] + nums[1] = 9, return [0, 1]

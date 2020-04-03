@@ -4,7 +4,7 @@ import java.util.stream.IntStream;
 
 /**
  * The FizzBuzz challenge:
- *   <p>Write a short program that prints each number from 0 to <i>n</i> on a new line.</p>
+ *   <p/><p>Write a short program that prints each number from 0 to <i>n</i> on a new line.</p>
  *   <p>- For each multiple of 3, print "Fizz" instead of the number.</p>
  *   <p>- For each multiple of 5, print "Buzz" instead of the number.</p>
  *   <p>- For each number that is a multiple of both 3 and 5, print "FizzBuzz" instead of the number.</p>
