@@ -1,9 +1,11 @@
-import challenges.*;
+import challenges.FizzBuzz;
+import challenges.TwoSum;
 import utils.TimeCode;
+
+import java.util.Optional;
 
 public class RunChallenge {
     public static void main(String[] args) {
-//        runFizzBuzz();
         runTwoSum();
     }
 
@@ -23,13 +25,12 @@ public class RunChallenge {
         long sum = 9;
         int[] numArray = {2, 7, 11, 15};
 
-        int[] indices = TwoSum.printIndices(numArray, sum);
-        if (indices != null) {
-            System.out.printf("Indices for a sum of %d are %d and %d (values of %d and %d respectively)\n",
-                    sum, indices[0], indices[1], numArray[indices[0]], numArray[indices[1]]);
-        } else {
-            System.out.println("No solution found");
-        }
+        Optional<int[]> opt = TwoSum.printIndices(numArray, sum);
+        opt.ifPresentOrElse(
+            indices -> System.out.printf(
+                "Indices for a sum of %d are %d and %d (values of %d and %d respectively)\n",
+                sum, indices[0], indices[1], numArray[indices[0]], numArray[indices[1]]),
+            () -> System.out.println("No solution found"));
     }
 
 }
