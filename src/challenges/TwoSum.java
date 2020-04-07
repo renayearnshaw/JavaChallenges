@@ -1,5 +1,7 @@
 package challenges;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 
 /**
@@ -13,16 +15,15 @@ import java.util.Optional;
  * @author Renay Earnshaw
  */
 public class TwoSum {
-    public static Optional<int[]> printIndices(int[] numArray, long sum) {
+    public static Optional<int[]> printIndices(int[] numArray, int sum) {
+        Map<Integer, Integer> arrayContents = new HashMap<>();
+        int delta;
         for (int i = 0; i < numArray.length; i++) {
-            // For each element in the array, try all the other elements
-            for (int j = 0; j < numArray.length; j++) {
-                if (i == j) continue; // You may not use the same element twice
-                if (numArray[i] + numArray[j] == sum) {
-                    // The solution has been found
-                    return Optional.of(new int[] {i, j});
-                }
+            delta = sum - numArray[i];
+            if (arrayContents.containsKey(delta)) {
+                return Optional.of(new int[] {arrayContents.get(delta), i});
             }
+            arrayContents.put(numArray[i], i);
         }
         return Optional.empty();
     }

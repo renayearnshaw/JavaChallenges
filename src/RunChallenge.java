@@ -22,7 +22,7 @@ public class RunChallenge {
     }
 
     private static void runTwoSum() {
-        long sum = 9;
+        int sum = 9;
         int[] numArray = {2, 7, 11, 15};
 
         Optional<int[]> opt = TwoSum.printIndices(numArray, sum);
