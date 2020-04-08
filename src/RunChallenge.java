@@ -3,12 +3,21 @@ import challenges.TwoSum;
 import utils.TimeCode;
 
 import java.util.Optional;
-
+/**
+ * The Java challenge harness used to run the various java challenges.</p>
+ *
+ * @author Renay Earnshaw
+ */
 public class RunChallenge {
     public static void main(String[] args) {
-        runTwoSum();
+        runFizzBuzz();
     }
 
+    /**
+     * The FizzBuzz challenge.
+     *
+     * <p/><p>This contains two versions of the challenge - one standard, and one using functional methods.</p>
+     */
     private static void runFizzBuzz() {
         // Run the standard FizzBuzz and time how long the loop takes to run
         try (TimeCode t = new TimeCode()) {
@@ -21,6 +30,9 @@ public class RunChallenge {
         }
     }
 
+    /**
+     * The Two Sum challenge.
+     */
     private static void runTwoSum() {
         int sum = 9;
         int[] numArray = {2, 7, 11, 15};

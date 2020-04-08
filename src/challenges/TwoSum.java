@@ -16,15 +16,18 @@ import java.util.Optional;
  */
 public class TwoSum {
     public static Optional<int[]> printIndices(int[] numArray, int sum) {
-        Map<Integer, Integer> arrayContents = new HashMap<>();
-        int delta;
+        Map<Integer, Integer> previouslyProcessed = new HashMap<>();
         for (int i = 0; i < numArray.length; i++) {
-            delta = sum - numArray[i];
-            if (arrayContents.containsKey(delta)) {
-                return Optional.of(new int[] {arrayContents.get(delta), i});
+            // Get the difference needed to add up to the sum for this array element
+            int delta = sum - numArray[i];
+            // Has this value been processed already?
+            if (previouslyProcessed.containsKey(delta)) {
+                return Optional.of(new int[] {previouslyProcessed.get(delta), i});
             }
-            arrayContents.put(numArray[i], i);
+            // Store the value, and its index
+            previouslyProcessed.put(numArray[i], i);
         }
+        // The sum could not be constructed from any of the values in the array
         return Optional.empty();
     }
 }
