@@ -30,10 +30,7 @@ public class FizzBuzz {
      * @param n the number of times to loop
      */
     public static void functionalVersion(final int n) {
-        IntStream.rangeClosed(1, n)
-                .forEach(i -> {
-                    printNumberOrString(i);
-                });
+        IntStream.rangeClosed(1, n).forEach(i -> printNumberOrString(i));
     }
 
     /**
