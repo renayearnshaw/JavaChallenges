@@ -1,4 +1,5 @@
 import challenges.FizzBuzz;
+import challenges.ReverseString;
 import challenges.TwoSum;
 import utils.TimeCode;
 
@@ -10,7 +11,7 @@ import java.util.Optional;
  */
 public class RunChallenge {
     public static void main(String[] args) {
-        runFizzBuzz();
+        runReverseStrings();
     }
 
     /**
@@ -43,6 +44,24 @@ public class RunChallenge {
                 "Indices for a sum of %d are %d and %d (values of %d and %d respectively)\n",
                 sum, indices[0], indices[1], numArray[indices[0]], numArray[indices[1]]),
             () -> System.out.println("No solution found"));
+    }
+
+    /**
+     * The Reverse a String challenge.
+     *
+     * <p/><p>This contains three versions of the challenge - one using the StringBuilder API,
+     * one using a mix of low-level string manipulation and StringBuilder, and one using
+     * just low-level string manipulation.</p>
+     */
+    private static void runReverseStrings() {
+
+        String reversed = ReverseString.reverseManually("Renay Earnshaw");
+        System.out.println(reversed);
+
+        reversed = ReverseString.reverseManuallyWithStringBuilder(reversed);
+        System.out.println(reversed);
+
+        System.out.println(ReverseString.reverseWithStringBuilder(reversed));
     }
 
 }
