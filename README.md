@@ -12,5 +12,15 @@ A selection of challenges in Java that might get thrown at you during interviews
   You may assume that each input would have exactly one solution, and you may not use the same element twice.
   
    **Example:**\
-   Given <code>nums = [2, 7, 11, 15], target = 9</code>,\
-   Because <code>nums[0] + nums[1] = 9, return [0, 1]</code>
+   Given `nums = [2, 7, 11, 15], target = 9`,\
+   Because `nums[0] + nums[1] = 9, return [0, 1]`
+3. **ReverseString**\
+  Write a short program that reverses a string. This is done in three ways:
+    * Using low-level string manipulation.
+    * Using low-level string iteration, but building the new string with `StringBuilder`.
+    * Using the `StringBuilder` API. This is what you'd do in the real world.
+4. **Stack**\
+  Write a class to implement a stack (LIFO). Provide the following API's:
+    * `push(item)` to push an item onto the stack.
+    * `pop()` to pop an item off the stack (the last item pushed).
+    * `peek()` to look at the item on the top of the stack.

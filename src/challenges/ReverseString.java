@@ -4,7 +4,7 @@ package challenges;
  * The Reverse a String challenge:
  *   <p/><p>Write a short program that reverses a string. This is done in three ways.</p>
  *   <p>- Using low-level string manipulation.</p>
- *   <p>- Using low-lever string iteration, but building the new string with StringBuilder.</p>
+ *   <p>- Using low-level string iteration, but building the new string with StringBuilder.</p>
  *   <p>- Using the StringBuilder API. This is what you'd do in the real world.</p>
  *
  * @author Renay Earnshaw
