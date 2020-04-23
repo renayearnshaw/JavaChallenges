@@ -71,11 +71,16 @@ public class RunChallenge {
     private static void runStack() {
         Stack stack = new Stack(3);
 
-        System.out.println(stack.peep());
-        System.out.print("Pushing 1. "); stack.push(1); stack.print();
-        System.out.print("Pushing 2. "); stack.push(2); stack.print();
-        System.out.print("Pushing 3. "); stack.push(3); stack.print();
-        System.out.print("Pushing 4. "); stack.push(4);
+        try {
+            System.out.println(stack.peep());
+            System.out.print("Pushing 1. "); stack.push(1); stack.print();
+            System.out.print("Pushing 2. "); stack.push(2); stack.print();
+            System.out.print("Pushing 3. "); stack.push(3); stack.print();
+            System.out.print("Pushing 4. "); stack.push(4);
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
+
         System.out.printf("Peeping gets: %d. Popping gets: %d. ", stack.peep(), stack.pop()); stack.print();
         System.out.printf("Peeping gets: %d. Popping gets: %d. ", stack.peep(), stack.pop()); stack.print();
         System.out.printf("Peeping gets: %d. Popping gets: %d. ", stack.peep(), stack.pop()); stack.print();
