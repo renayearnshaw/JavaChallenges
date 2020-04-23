@@ -71,7 +71,7 @@ public class RunChallenge {
     private static void runStack() {
         Stack stack = new Stack(3);
 
-        stack.peep();
+        System.out.println(stack.peep());
         System.out.print("Pushing 1. "); stack.push(1); stack.print();
         System.out.print("Pushing 2. "); stack.push(2); stack.print();
         System.out.print("Pushing 3. "); stack.push(3); stack.print();

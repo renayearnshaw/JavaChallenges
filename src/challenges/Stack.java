@@ -20,7 +20,7 @@ public class Stack {
      }
 
      public void push(final int i) {
-         if (tail < MAX_SIZE - 1) {
+         if (!isFull()) {
              stack[++tail] = i;
          } else {
              System.out.println("You have reached the maximum capacity of your stack, which is " + MAX_SIZE);
@@ -28,7 +28,7 @@ public class Stack {
      }
 
      public int pop() {
-         if (tail >= 0) {
+         if (!isEmpty()) {
              return stack[tail--];
          } else {
              return -1;
@@ -36,7 +36,7 @@ public class Stack {
      }
 
      public int peep() {
-         if (tail >= 0) {
+         if (!isEmpty()) {
              return stack[tail];
          } else {
              return -1;
@@ -44,17 +44,29 @@ public class Stack {
      }
 
      public void print() {
-         if (tail >= 0) {
+         if (!isEmpty()) {
              System.out.print("Your stack contents are: [ ");
              for (int i = 0; i <= tail; i++) {
-                 if (i != tail) {
-                     System.out.printf("%d, ", stack[i]);
-                 } else {
-                     System.out.printf("%d ]\n", stack[i]);
-                 }
+                 printElement(i);
              }
          } else {
              System.out.println("The stack is empty");
          }
+     }
+
+    private void printElement(final int i) {
+        if (i != tail) {
+            System.out.printf("%d, ", stack[i]);
+        } else {
+            System.out.printf("%d ]\n", stack[i]);
+        }
+    }
+
+    private boolean isFull() {
+         return tail >= MAX_SIZE - 1;
+     }
+
+     private boolean isEmpty() {
+         return tail < 0;
      }
 }
