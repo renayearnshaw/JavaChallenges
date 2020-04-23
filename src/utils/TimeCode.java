@@ -9,9 +9,7 @@ import java.time.Instant;
  * @author Renay Earnshaw
  */
 public class TimeCode implements AutoCloseable {
-    private Instant start;
-    private Instant end;
-    private long timeElapsed;
+    private final Instant start;
 
     public TimeCode() {
         start = Instant.now();
@@ -19,8 +17,8 @@ public class TimeCode implements AutoCloseable {
 
     @Override
     public void close() {
-        end = Instant.now();
-        timeElapsed = Duration.between(start, end).toMillis();
+        Instant end = Instant.now();
+        long timeElapsed = Duration.between(start, end).toMillis();
         System.out.printf("Time elapsed is: %d ms\n", timeElapsed);
     }
 }

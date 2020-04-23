@@ -1,7 +1,5 @@
 package challenges;
 
-import java.util.Arrays;
-
 /**
  * The Implement a Stack challenge:
  *   <p/><p>Write a class to implement a stack (LIFO). Provide the following API's:</p>
@@ -10,10 +8,11 @@ import java.util.Arrays;
  *   <p>- peek() to look at the item on the top of the stack.</p>
  *
  * @author Renay Earnshaw
- */public class Stack {
+ */
+public class Stack {
      private final int MAX_SIZE;
      private int tail = -1;
-     private int[] stack;
+     private final int[] stack;
 
      public Stack(final int size) {
          MAX_SIZE = size;
@@ -46,7 +45,7 @@ import java.util.Arrays;
 
      public void print() {
          if (tail >= 0) {
-             System.out.printf("Your stack contents are: [ ");
+             System.out.print("Your stack contents are: [ ");
              for (int i = 0; i <= tail; i++) {
                  if (i != tail) {
                      System.out.printf("%d, ", stack[i]);
