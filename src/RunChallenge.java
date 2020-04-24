@@ -77,7 +77,7 @@ public class RunChallenge {
             System.out.print("Pushing 2. "); stack.push(2); stack.print();
             System.out.print("Pushing 3. "); stack.push(3); stack.print();
             System.out.print("Pushing 4. "); stack.push(4);
-        } catch (IllegalArgumentException e) {
+        } catch (StackOverflowError e) {
             System.out.println(e.getMessage());
         }
 

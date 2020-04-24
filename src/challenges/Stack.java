@@ -23,7 +23,7 @@ public class Stack {
          if (!isFull()) {
              stack[++tail] = i;
          } else {
-             throw new IllegalArgumentException("You have reached the maximum capacity of your stack, which is " + MAX_SIZE);
+             throw new StackOverflowError("You have reached the maximum capacity of your stack, which is " + MAX_SIZE);
          }
      }
 
