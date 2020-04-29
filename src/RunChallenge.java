@@ -1,7 +1,4 @@
-import challenges.FizzBuzz;
-import challenges.ReverseString;
-import challenges.Stack;
-import challenges.TwoSum;
+import challenges.*;
 import utils.TimeCode;
 
 import java.util.Optional;
@@ -12,7 +9,7 @@ import java.util.Optional;
  */
 public class RunChallenge {
     public static void main(String[] args) {
-        runStack();
+        runReverseIntegers();
     }
 
     /**
@@ -85,6 +82,33 @@ public class RunChallenge {
         System.out.printf("Peeping gets: %d. Popping gets: %d. ", stack.peep(), stack.pop()); stack.print();
         System.out.printf("Peeping gets: %d. Popping gets: %d. ", stack.peep(), stack.pop()); stack.print();
         System.out.printf("Peeping gets: %d. Popping gets: %d. ", stack.peep(), stack.pop()); stack.print();
+    }
+
+    /**
+     * The Reverse an Integer challenge.
+     */
+    private static void runReverseIntegers() {
+
+        int input = 987654321;
+        System.out.printf("The reverse of %d is %d\n", input, ReverseInteger.reverse(input));
+
+        input = -987654321;
+        System.out.printf("The reverse of %d is %d\n", input, ReverseInteger.reverse(input));
+
+        input = 876543210;
+        System.out.printf("The reverse of %d is %d\n", input, ReverseInteger.reverse(input));
+
+        // Test the maximum limit
+        input = Integer.MAX_VALUE;
+        System.out.printf("The reverse of %d is %d\n", input, ReverseInteger.reverse(input));
+
+        // Test the minimum limit
+        input = Integer.MIN_VALUE;
+        System.out.printf("The reverse of %d is %d\n", input, ReverseInteger.reverse(input));
+
+        // Test that zero is handled correctly
+        input = 0;
+        System.out.printf("The reverse of %d is %d\n", input, ReverseInteger.reverse(input));
     }
 
 }

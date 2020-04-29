@@ -24,3 +24,8 @@ A selection of challenges in Java that might get thrown at you during interviews
     * `push(item)` to push an item onto the stack.
     * `pop()` to pop an item off the stack (the last item pushed).
     * `peek()` to look at the item on the top of the stack.
+5. **ReverseInteger**\
+  Write a short program that reverses an integer.
+    * Handle negative numbers.
+    * Handle maximum and minimum integer values.
+
