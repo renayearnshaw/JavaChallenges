@@ -9,7 +9,7 @@ import java.util.Optional;
  */
 public class RunChallenge {
     public static void main(String[] args) {
-        runReverseIntegers();
+        runIntegerToRomanNumeral();
     }
 
     /**
@@ -109,6 +109,24 @@ public class RunChallenge {
         // Test that zero is handled correctly
         input = 0;
         System.out.printf("The reverse of %d is %d\n", input, ReverseInteger.reverse(input));
+    }
+
+    private static void runIntegerToRomanNumeral() {
+        int[] inputs = {
+                0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
+                10, 15, 22, 34, 57, 78, 99,
+                100, 223, 569, 842, 999,
+                1000, 1569, 2050, 2888, 3000, 3001};
+        Optional<String> opt;
+
+        for (int input: inputs) {
+            opt = IntegerToRomanNumeral.map(input);
+
+            opt.ifPresentOrElse(
+                    romanNumeral -> System.out.printf("%d in roman numerals is %s\n", input, romanNumeral),
+                    () -> System.out.println("No solution found"));
+        }
+
     }
 
 }
