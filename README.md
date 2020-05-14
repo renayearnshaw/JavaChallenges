@@ -28,4 +28,7 @@ A selection of challenges in Java that might get thrown at you during interviews
   Write a short program that reverses an integer.
     * Handle negative numbers.
     * Handle maximum and minimum integer values.
+5. **IntegerToRomanNumeral**\
+  Write a short program that converts an integer to a roman numeral.
+  The value of the integer is limited to between one and three thousand.
 

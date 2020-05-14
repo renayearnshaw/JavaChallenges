@@ -111,6 +111,9 @@ public class RunChallenge {
         System.out.printf("The reverse of %d is %d\n", input, ReverseInteger.reverse(input));
     }
 
+    /**
+     * The Integer to Roman Numeral challenge.
+     */
     private static void runIntegerToRomanNumeral() {
         int[] inputs = {
                 0, 1, 2, 3, 4, 5, 6, 7, 8, 9,

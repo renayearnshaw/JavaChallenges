@@ -2,6 +2,13 @@ package challenges;
 
 import java.util.Optional;
 
+/**
+ * The Roman Numeral challenge:
+ *   <p>Write a short program that converts an integer into a roman numeral.</p>
+ *   <p>The value of the integer is limited to between one and three thousand.</p>
+ *
+ * @author Renay Earnshaw
+ */
 public class IntegerToRomanNumeral {
     private static final String[] UNITS = {"", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"};
     private static final String[] TENS = {"", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"};
@@ -14,12 +21,10 @@ public class IntegerToRomanNumeral {
             return Optional.empty();
         }
 
-        StringBuilder out = new StringBuilder();
-
         return Optional.of(
-                THOUSANDS[in/1000 % 10]
-                + HUNDREDS[in/100 % 10]
-                + TENS[in/10 % 10]
+                THOUSANDS[in/1000]
+                + HUNDREDS[(in % 1000) / 100]
+                + TENS[(in % 100) / 10]
                 + UNITS[in % 10]);
 
     }
