@@ -1,6 +1,5 @@
 package challenges;
 
-import java.util.Map;
 import java.util.Optional;
 
 public class IntegerToRomanNumeral {
@@ -17,25 +16,11 @@ public class IntegerToRomanNumeral {
 
         StringBuilder out = new StringBuilder();
 
-        // Get the value of the units digit
-        int digitValue = in % 10;
-        out.insert(0, UNITS[digitValue]);
-        // Get the value of the tens digit
-        in /= 10;
-        digitValue = in % 10;
-        if (in > 0)
-            out.insert(0, TENS[digitValue]);
-        // Get the value of the hundreds digit
-        in /= 10;
-        digitValue = in % 10;
-        if (in > 0)
-            out.insert(0, HUNDREDS[digitValue]);
-        // Get the value of the thousands digit
-        in /= 10;
-        digitValue = in % 10;
-        if (in > 0)
-            out.insert(0, THOUSANDS[digitValue]);
+        return Optional.of(
+                THOUSANDS[in/1000 % 10]
+                + HUNDREDS[in/100 % 10]
+                + TENS[in/10 % 10]
+                + UNITS[in % 10]);
 
-        return Optional.of(out.toString());
     }
 }
